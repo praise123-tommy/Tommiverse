@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tomiverse Profile</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🌟 Welcome to Tomiverse, <span id="name"></span>!</h1>
+  <img id="photo" src="" alt="Profile Picture" width="100" />
+  <p><strong>Email:</strong> <span id="email"></span></p>
+  <p><strong>DOB:</strong> <span id="dob"></span></p>
+  <p><strong>Description:</strong> <span id="desc"></span></p>
+  <p><strong>Marital Status:</strong> <span id="marital"></span></p>
+  <p><strong>Work Status:</strong> <span id="work"></span></p>
+  <p><strong>Dream:</strong> <span id="dream"></span></p>
+  <p><strong>Phone:</strong> <span id="phone"></span></p>
+  <p><strong>NIN:</strong> <span id="nin"></span></p>
+  <p><strong>Status:</strong> <span id="status"></span></p>
+  <p><strong>Signup Time:</strong> <span id="time"></span></p>
+  <hr>
+  <h2>📊 Your Stats</h2>
+  <p>✅ Tasks: <span id="tasks">0</span></p>
+  <p>💰 Coins: <span id="coins">0</span></p>
+  <p>🤝 Referrals: <span id="referrals">0</span></p>
+  <p>🏅 Badges: <span id="badges">0</span></p>
+  <script>
+    const data = JSON.parse(localStorage.getItem("tomiverseUser"));
+    if (!data) location.href = "signup.html";
+    document.getElementById("name").textContent = data.username;
+    document.getElementById("email").textContent = data.email;
+    document.getElementById("dob").textContent = data.dob;
+    document.getElementById("desc").textContent = data.description;
+    document.getElementById("marital").textContent = data.maritalStatus;
+    document.getElementById("work").textContent = data.workStatus;
+    document.getElementById("dream").textContent = data.dream;
+    document.getElementById("phone").textContent = data.phone;
+    document.getElementById("nin").textContent = data.nin;
+    document.getElementById("status").textContent = data.status;
+    document.getElementById("time").textContent = data.signupTime;
+    document.getElementById("photo").src = data.photo;
+  </script>
+</body>
+</html>

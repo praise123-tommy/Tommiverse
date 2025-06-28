@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tomiverse Signup</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🌀 Tomiverse Signup</h1>
+  <form id="signupForm">
+    <input type="text" placeholder="👤 Username" name="username" required />
+    <input type="email" placeholder="📧 Email" name="email" required />
+    <input type="date" placeholder="🎂 Date of Birth" name="dob" required />
+    <textarea name="description" placeholder="📝 Describe yourself (min 30 characters)" minlength="30" required></textarea>
+    <select name="maritalStatus" required>
+      <option value="">💍 Marital Status</option>
+      <option>Single</option>
+      <option>Married</option>
+      <option>Complicated</option>
+    </select>
+    <select name="workStatus" required>
+      <option value="">👔 Work Status</option>
+      <option>Student</option>
+      <option>Working</option>
+      <option>Unemployed</option>
+    </select>
+    <input type="text" name="dream" placeholder="💫 Your Dream (Goal)" required />
+    <input type="tel" name="phone" placeholder="📱 Phone Number" required />
+    <input type="text" name="nin" placeholder="🆔 NIN" required />
+    <textarea name="status" placeholder="📢 3-line Status" rows="3" required></textarea>
+    <input type="file" name="photo" accept="image/*" required />
+    <button type="submit">✨ Create Account</button>
+  </form>
+  <script src="main.js"></script>
+</body>
+</html>
